@@ -49,3 +49,8 @@
     name: "{{ ansible_user }}"
     groups: [docker]
     append: true
+
+- name: Install dependencies for ansible
+  pip:
+    name: docker-py
+    state: present
